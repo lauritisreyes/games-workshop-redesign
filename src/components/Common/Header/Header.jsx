@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { SearchIcon } from '../Icons/Icons';
 
 const StyledHeader = styled.header `
     width: 100%;
@@ -16,7 +17,6 @@ const StyledHeader = styled.header `
         &-icons {
             width: 24px;
             height: 24px;
-            background-color: blue;
         }
     }
 `;
@@ -38,9 +38,6 @@ const HeaderNav = styled.nav `
             padding: 1rem 1.5rem;
             text-transform: uppercase;
             font-weight: 500;
-            :hover {
-                color: green;
-            }
         }
     }
 `;
@@ -73,7 +70,9 @@ export const Header = () => {
                     </ul>
                 </HeaderNav>
 
-                <div className='Header-icons'></div>
+                <div className='Header-icons'>
+                    <SearchIcon/>
+                </div>
 
             </div>
             

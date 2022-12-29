@@ -18,14 +18,52 @@ const StyledRecommended = styled.div `
     }
 `;
 
+const InfoCard = styled.li `
+    background-color: white;
+    width: 100%;
+    aspect-ratio: 1;
+    grid-column: span 2;
+    grid-row: span 2;
+`;
+
 const Card = styled.li `
     background-color: #F3F2F2;
     width: 100%;
     aspect-ratio: 1;
-    .Gallery {
+    &:nth-of-type(2){
+        grid-row: span 2;
+        aspect-ratio: initial;
+    }
+    &:nth-of-type(5){
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    .Item {
         &-link {
             width: 100%;
             height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            :hover {
+                .Item-media {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        &-media {
+            transition: 0.5s;
+        }
+        &-text {
+            position: absolute;
+            bottom: 1rem;
+            text-align: center;
+            left: 0;
+            right: 0;
+            margin: auto;
+            font-size: 0.8rem;
+            text-transform: uppercase;
         }
     }
 `;
@@ -36,36 +74,25 @@ export const Recommended = () => {
         { id:0, img:'./home/breakaboss.png', alt:'', text:'Break a Boss'},
         { id:1, img:'./home/caballero-execrador.png', alt:'', text:'Caballero Execrador'},
         { id:2, img:'./home/chaos-spawn.png', alt:'', text:'Chaos Spawn'},
-        { id:3, img:'./home/castigator.png', alt:'', text:'Castigator'}
+        { id:6, img:'./home/aberrants.png', alt:'', text:'Aberrants'},
+        { id:3, img:'./home/castigator.png', alt:'', text:'Castigator'},
+        { id:4, img:'./home/orlock.png', alt:'', text:'Orlock Outrider Quads'},
+        { id:5, img:'./home/stegadon.png', alt:'', text:'Stegadon'},
     ]
 
-    const data2 = [
-        { id:4, img:'./home/domador.png', alt:'', text:'Jefe Domador en Troggoth Lodoso'},
-        { id:5, img:'./home/stegadon.png', alt:'', text:'Stegadon'},
-        { id:6, img:'./home/orlock.png', alt:'', text:'Orlock Outrider Quads'},
-        { id:7, img:'./home/aberrants.png', alt:'', text:'Aberrants'}
-    ]
 
     return (
 
         <StyledRecommended className="Recommended">
+            
             <ul className="Recommended-gallery">
-                { data.map ( ({id,alt, img}) => 
-                    <Card className="Gallery-li" key={id} href="#">
-                        <a className="Gallery-link" href="#">
-                            <div className="Gallery-media">
-                                <img className="Gallery-img" src={img} alt={alt}/>
-                            </div>
-                        </a>
-                    </Card>
-                )}
-            </ul>
-            <ul className="Recommended-gallery">
-                { data2.map ( ({id,alt, img}) => 
-                    <Card className="Gallery-li" key={id} href="#">
-                        <a className="Gallery-link" href="#">
-                            <div className="Gallery-media">
-                                <img className="Gallery-img" src={img} alt={alt}/>
+                <InfoCard className="Gallery-item"></InfoCard> 
+                { data.map ( ({id,alt, text, img}) =>
+                    <Card className="Gallery-item" key={id} href="#">
+                        <a className="Item-link" href="#">
+                            <span className="Item-text">{text}</span>
+                            <div className="Item-media">
+                                <img className="Item-img" src={img} alt={alt}/>
                             </div>
                         </a>
                     </Card>
