@@ -34,10 +34,22 @@ const HeaderNav = styled.nav `
             align-items: center;
             justify-content: center;
         }
+        &-li {
+            padding: 0rem 0.2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
         &-link {
-            padding: 1rem 1.5rem;
+            padding: 1rem 1rem;
             text-transform: uppercase;
             font-weight: 500;
+            position: relative;
+            border-radius: 4px;
+            :hover {
+                background-color: #F3F2F2;
+            }
         }
     }
 `;
@@ -47,10 +59,10 @@ export const Header = () => {
 
     const sections = [
         {id:0, text:'Nuevo'},
-        {id:1, text:'Pintura y modelismo'},
+        {id:1, text:'Materiales'},
         {id:2, text:'Juegos en caja'},
         {id:3, text:'Regalos'},
-        {id:4, text:'Warhammer community'}
+        {id:4, text:'Community'}
     ]
 
     return (

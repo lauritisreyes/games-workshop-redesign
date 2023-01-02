@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Button } from "../../Common/Button/Button";
 
 const StyledIntro = styled.section `
     display: flex;
@@ -7,14 +6,14 @@ const StyledIntro = styled.section `
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 400px;
+    height: 450px;
     .Intro {
         &-background {
             background-image: url(./home/warhammer-main.jpg);
             background-position: center;
             background-repeat: none;
             background-size: cover;
-            width: 80%;
+            width: 100%;
             height: 100%;
             margin: auto;
         }
