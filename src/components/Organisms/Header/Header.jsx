@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { SearchIcon } from '../Icons/Icons';
+import { SearchIcon } from '../../Atoms/Icons/Icons';
 
 const StyledHeader = styled.header `
     width: 100%;

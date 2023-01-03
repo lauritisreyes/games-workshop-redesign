@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
+import { Card } from "../../Atoms/Card/Card";
 
 const StyledSlider = styled.div `
     width: 100%;
@@ -32,41 +33,6 @@ const SliderUl = styled.ul `
     padding: 0.5rem 0;
     transition: 0.2s ease;
     width: 200%;
-`;
-
-
-const Card = styled.li `
-    position: relative;
-    background-color: #F3F3F2;
-    .Item {
-        &-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            width: 100%;
-            height: 100%;
-            :hover {
-                .Item-media {
-                    transform: scale(1.1);
-                }
-            }
-        }
-        &-media {
-            transition: 0.5s;
-            width: 300px;
-        }
-        &-text {
-            position: absolute;
-            bottom: 1rem;
-            text-align: center;
-            left: 0;
-            right: 0;
-            margin: auto;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-        }
-    }
 `;
 
 const SliderButton = styled.button `
@@ -129,15 +95,8 @@ export const Slider = () => {
                 <div className="Slider-gallery">
                     <div className="Gallery-container">
                         <SliderUl className="Slider-ul" style={ { transform : `translateX(-${ 316 * position}px)` }}>
-                            { data.map ( ({id,alt, text, img}) =>
-                                <Card className="Gallery-item" key={id} href="#">
-                                    <a className="Item-link" href="#">
-                                        <span className="Item-text">{text}</span>
-                                        <div className="Item-media">
-                                            <img className="Item-img" src={img} alt={alt}/>
-                                        </div>
-                                    </a>
-                                </Card>
+                            { data.map ( (data) =>
+                                <Card key={data.id} {...data}/>
                             )}
                         </SliderUl>
                     </div>

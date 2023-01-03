@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Button } from "../../Common/Button/Button";
+import { Button } from "../../Atoms/Button/Button";
 
 const StyledPubli = styled.div `
     width: 80%;
