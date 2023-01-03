@@ -6,33 +6,39 @@ const StyledRecommended = styled.div `
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 6rem 0;
+    padding: 2rem 0;
     .Recommended {
         &-gallery {
-            width: 80%;
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1rem;
+            grid-template-columns: repeat(4, 300px);
+            gap: 16px;
             padding: 0.5rem 0;
+            margin: 0 auto;
         }
     }
 `;
 
-const InfoCard = styled.li `
-    background-color: white;
-    width: 100%;
-    aspect-ratio: 1;
-    grid-column: span 2;
-    grid-row: span 2;
-`;
 
 const Card = styled.li `
     background-color: #F3F2F2;
     width: 100%;
     aspect-ratio: 1;
+    &:nth-of-type(1){
+        grid-row-start: 2;
+        grid-column-start: 2;
+    }
     &:nth-of-type(2){
         grid-row: span 2;
         aspect-ratio: initial;
+        grid-column-start: 3;
+    }
+    &:nth-of-type(3){
+        grid-row-start: 1;
+        grid-column-start: 4;
+    }
+    &:nth-of-type(4){
+        grid-row-start: 2;
+        grid-column-start: 4;
     }
     &:nth-of-type(5){
         grid-column: span 2;
@@ -71,22 +77,22 @@ const Card = styled.li `
 export const Recommended = () => {
 
     const data = [
-        { id:0, img:'./home/breakaboss.png', alt:'', text:'Break a Boss'},
-        { id:1, img:'./home/caballero-execrador.png', alt:'', text:'Caballero Execrador'},
-        { id:2, img:'./home/chaos-spawn.png', alt:'', text:'Chaos Spawn'},
-        { id:6, img:'./home/aberrants.png', alt:'', text:'Aberrants'},
-        { id:3, img:'./home/castigator.png', alt:'', text:'Castigator'},
-        { id:4, img:'./home/orlock.png', alt:'', text:'Orlock Outrider Quads'},
-        { id:5, img:'./home/stegadon.png', alt:'', text:'Stegadon'},
+        { id:0, img:'./home/breakaboss.png', alt:'', text:'1'},
+        { id:1, img:'./home/breakaboss.png', alt:'', text:'2'},
+        { id:2, img:'./home/caballero-execrador.png', alt:'', text:'Caballero Execrador 3'},
+        { id:3, img:'./home/chaos-spawn.png', alt:'', text:'Chaos Spawn 4'},
+        { id:4, img:'./home/aberrants.png', alt:'', text:'Aberrants 5'},
+        { id:5, img:'./home/castigator.png', alt:'', text:'Castigator 6'},
+        { id:6, img:'./home/orlock.png', alt:'', text:'Orlock Outrider Quads 7'},
+        { id:7, img:'./home/stegadon.png', alt:'', text:'Stegadon 8'},
+
     ]
 
 
     return (
 
-        <StyledRecommended className="Recommended">
-            
+        <StyledRecommended className="Recommended"> 
             <ul className="Recommended-gallery">
-                <InfoCard className="Gallery-item"></InfoCard> 
                 { data.map ( ({id,alt, text, img}) =>
                     <Card className="Gallery-item" key={id} href="#">
                         <a className="Item-link" href="#">

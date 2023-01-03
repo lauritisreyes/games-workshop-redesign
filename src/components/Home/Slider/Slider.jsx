@@ -3,10 +3,10 @@ import styled from "styled-components";
 
 const StyledSlider = styled.div `
     width: 100%;
-    padding: 6rem 0;
+    padding: 0 0 2rem 0;
     .Slider {
         &-container {
-            width: 80%;
+            width: 1248px;
             margin: auto;
             position: relative;
         }
@@ -17,16 +17,9 @@ const StyledSlider = styled.div `
                 &-container {
                     width: 100%;
                     overflow: hidden;
+                    margin-right: -1rem;
                 }
             }
-        }
-        &-controls {
-            padding: 2rem 0;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
         }
     }
 `;
@@ -35,6 +28,7 @@ const StyledSlider = styled.div `
 const SliderUl = styled.ul `
     position: relative;
     display: flex;
+    gap: 16px;
     padding: 0.5rem 0;
     transition: 0.2s ease;
     width: 200%;
@@ -44,13 +38,14 @@ const SliderUl = styled.ul `
 const Card = styled.li `
     position: relative;
     background-color: #F3F3F2;
-    margin-right: 1rem;
     .Item {
         &-link {
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
+            width: 100%;
+            height: 100%;
             :hover {
                 .Item-media {
                     transform: scale(1.1);
@@ -59,6 +54,7 @@ const Card = styled.li `
         }
         &-media {
             transition: 0.5s;
+            width: 300px;
         }
         &-text {
             position: absolute;
@@ -76,8 +72,13 @@ const Card = styled.li `
 const SliderButton = styled.button `
     width: 40px;
     height: 40px;
-    background-color: #F3F3F2;
+    background-color: black;
     cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    z-index: 2;
     &.Controls {
         &-right {
             right: 0;
@@ -127,7 +128,7 @@ export const Slider = () => {
                 </div>
                 <div className="Slider-gallery">
                     <div className="Gallery-container">
-                        <SliderUl className="Slider-ul" style={ { transform : `translateX(-${ 12.5 * position}%)` }}>
+                        <SliderUl className="Slider-ul" style={ { transform : `translateX(-${ 316 * position}px)` }}>
                             { data.map ( ({id,alt, text, img}) =>
                                 <Card className="Gallery-item" key={id} href="#">
                                     <a className="Item-link" href="#">

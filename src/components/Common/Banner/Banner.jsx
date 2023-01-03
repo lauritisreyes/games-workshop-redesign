@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledBanner = styled.div `
+const StyledBanner = styled.a `
     background-color: #F3F2F2;
     margin: auto;
     margin-bottom: 1rem;
@@ -13,6 +13,6 @@ const StyledBanner = styled.div `
 
 export const Banner = () => {
     return (
-        <StyledBanner>Suscríbete a la Newsletter y disfruta de lo último de Games Workshop: Noticias, promociones, consejos de hobby y mucho más.</StyledBanner>
+        <StyledBanner href="#">Suscríbete a la Newsletter y disfruta de lo último de Games Workshop: Noticias, promociones, consejos de hobby y mucho más.</StyledBanner>
     )
 }

@@ -134,7 +134,6 @@ export const Footer = () => {
                     )}
                 </FooterLinks>
             </div>
-
         </StyledFooter>
     )
 }
