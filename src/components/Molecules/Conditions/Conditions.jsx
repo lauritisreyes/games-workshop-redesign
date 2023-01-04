@@ -1,18 +1,4 @@
-import styled from "styled-components";
-
-const StyledConditions = styled.div `
-    background-color: black;
-    margin: auto;
-    padding: 0.5rem 2rem;
-    width: 100%;
-    .Conditions {
-        &-text {
-            text-align: center;
-            font-size: 0.8rem;
-            color: white;
-        }
-    }
-`;
+import { StyledConditions } from "./Styles.Conditions"
 
 
 export const Conditions = () => {

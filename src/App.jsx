@@ -15,6 +15,7 @@ import { Paint } from "./components/Molecules/Paint/Paint"
 
 
 
+
 const App = () => {
   return (
     <Theme>
@@ -33,6 +34,7 @@ const App = () => {
         <Newsletter/>
         <Conditions/>
         <Footer/>
+
       </>
     </Theme>
   )

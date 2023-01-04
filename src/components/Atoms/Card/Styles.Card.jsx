@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { useTheme } from "styled-components";
 
 export const StyledCard = styled.li `
     position: relative;
@@ -19,7 +19,6 @@ export const StyledCard = styled.li `
         }
         &-media {
             transition: 0.5s;
-            width: 300px;
         }
         &-text {
             position: absolute;
@@ -28,7 +27,7 @@ export const StyledCard = styled.li `
             left: 0;
             right: 0;
             margin: auto;
-            font-size: 0.8rem;
+            font-size: ${props => props.theme.fontSize.small};
             text-transform: uppercase;
         }
     }
