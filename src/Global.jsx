@@ -17,6 +17,7 @@ export const GlobalStyles = createGlobalStyle `
         display: block;
         object-fit: cover;        
         object-position: center center;
+        pointer-events: none;
     }
 
     a {
@@ -80,6 +81,7 @@ export const GlobalStyles = createGlobalStyle `
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         background-color: white;
+        margin: auto;
     }
 
 

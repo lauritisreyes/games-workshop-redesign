@@ -1,17 +1,17 @@
-import { Banner } from "./components/Organisms/Banner/Banner"
-import { Footer } from "./components/Organisms/Footer/Footer"
-import { Header } from "./components/Organisms/Header/Header"
-import { Login } from "./components/Organisms/Login/Login"
-import { Brands } from "./components/Molecules/Brands/Brands"
-import { Newsletter } from "./components/Molecules/Newsletter/Newsletter"
-import { Intro } from "./components/Molecules/Intro/Intro"
-import { Publi } from "./components/Molecules/Publi/Publi"
-import { Recommended } from "./components/Molecules/Recommended/Recommended"
-import { Slider } from "./components/Molecules/Slider/Slider"
+import { Banner } from "./components/Banner/Banner"
+import { Footer } from "./components/Footer/Footer"
+import { Header } from "./components/Header/Header"
+import { Login } from "./components/Login/Login"
+import { Brands } from "./components/Brands/Brands"
+import { Newsletter } from "./components/Newsletter/Newsletter"
+import { Intro } from "./components/Intro/Intro"
+import { Publi } from "./components/Publi/Publi"
+import { Recommended } from "./components/Recommended/Recommended"
+import { Slider } from "./components/Slider/Slider"
 import { GlobalStyles } from "./Global"
 import { Theme } from "./Theme"
-import { Conditions } from "./components/Molecules/Conditions/Conditions"
-import { Paint } from "./components/Molecules/Paint/Paint"
+import { Conditions } from "./components/Conditions/Conditions"
+import { Paint } from "./components/Paint/Paint"
 
 
 
@@ -30,7 +30,7 @@ const App = () => {
         <Recommended/>
         <Publi/>
         <Paint/>
-        <Slider/>
+        {/* <Slider/> */}
         <Newsletter/>
         <Conditions/>
         <Footer/>
