@@ -12,6 +12,10 @@ export const StyledHeader = styled.header `
             align-items: center;
             justify-content: space-between;
             height: 7rem;
+            @media (max-width: 1200px) {
+                margin: 0 1rem;
+                width: auto;
+            }
         }
         &-icons {
             width: 24px;
@@ -23,8 +27,28 @@ export const StyledHeader = styled.header `
         &-burger {
             width: 24px;
             height: 24px;
-            background-color: blue;
             display: none;
+            position: relative;
+            &:after {
+                content: '';
+                width: 100%;
+                height: 2px;
+                background-color: black;
+                border-radius: 4px;
+                position: absolute;
+                top: 6px;
+                left: 0;
+            }
+            &:before {
+                content: '';
+                width: 100%;
+                height: 2px;
+                background-color: black;
+                border-radius: 4px;
+                position: absolute;
+                bottom: 6px;
+                left: 0;
+            }
             @media (max-width: 1200px) {
                 display: block;
             }

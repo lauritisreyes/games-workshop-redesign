@@ -32,7 +32,8 @@ export const Header = () => {
                 <div className='Header-icons'>
                     <SearchIcon/>
                 </div>
-                <button className='Header-burger'></button>
+                <button className='Header-burger'>
+                </button>
 
             </div>
             
