@@ -6,7 +6,7 @@
 Currently working on it...
 
 ## Visit the Live Site
-- [https://ethereum-copycat.netlify.app](https://games-workshop-redesign.netlify.app)
+- [https://games-workshop-redesign.netlify.app](https://games-workshop-redesign.netlify.app)
 
 ## Description 📑
 
