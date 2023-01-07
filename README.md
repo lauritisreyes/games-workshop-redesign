@@ -12,7 +12,7 @@ This is a redesign of the Games Workshop Landing Page. It has been designed in F
 
 ## Preview
 
-![Captura del proyecto](https://github.com/lauritisreyes/games-workshop-redesign/blob/4355b428642be993e0aa897ff417a948d6e0f952/public/assets/screenshot-1.png)
+![Captura del proyecto](https://github.com/lauritisreyes/games-workshop-redesign/blob/22a90dc89a62720bdc3cc210dcb0fc05897f020f/public/screenshot.png)
 
 
 ## Autor ✒️
