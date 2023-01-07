@@ -11,7 +11,7 @@ export const StyledIntro = styled.section `
         &-background {
             background-image: url(./home/warhammer-main.jpg);
             background-position: center;
-            background-repeat: none;
+            background-repeat: no-repeat;
             background-size: cover;
             width: 100%;
             height: 100%;

@@ -24,7 +24,7 @@ export const Header = () => {
                     <ul className='Nav-ul'>
                         {sections.map ( ({text, id})=>
                             <li key={id} className='Nav-li'>
-                                <a className='Nav-link' href="" alt="">{text}</a>
+                                <a className='Nav-link' href="#">{text}</a>
                             </li>
                         )}
                     </ul>

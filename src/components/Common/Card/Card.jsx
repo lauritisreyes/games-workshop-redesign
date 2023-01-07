@@ -3,7 +3,7 @@ import { StyledCard } from "./Styles.Card"
 
 export const Card = ({text,img,alt}) => {
     return (
-        <StyledCard className="Card" href="#">
+        <StyledCard className="Card">
             <a className="Card-link" href="#">
                 <span className="Card-text">{text}</span>
                 <div className="Card-media">
