@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card } from "../Common/Card/Card";
 import { ChevronLeft, ChevronRight } from "../Common/Icons/Icons";
 import { Control, SliderUl, StyledSlider } from "./Styles.Slider";
@@ -6,6 +6,7 @@ import { Control, SliderUl, StyledSlider } from "./Styles.Slider";
 
 
 export const Slider = () => {
+
 
     const data = [
         { id:0, img:'./home/Bloodpelt Hunter.png', alt:'Warhammer miniature of a Bloodpelt Hunter', text:'Bloodpelt Hunter'},
@@ -19,18 +20,31 @@ export const Slider = () => {
     ]
 
     let [ position, setPosition ] = useState(0)
+    let [ maxPosition, setMaxPosition ] = useState(4)
+    let [ windowWidth, setWindowWidth ] = useState (window.innerWidth)
+
+    useEffect (( ) => {
+        window.addEventListener ('resize', ()=> {
+            setWindowWidth ( window.innerWidth )
+        })
+    }, [])
+    if (window.innerWidth >= 1500){
+        maxPosition = 4
+    } else if ( window.innerWidth < 1500 ){
+        maxPosition = 7
+    }
+
 
     const RightClick = () => {
-        let index = ( position === 4 ? 0 : position + 1)
-        setPosition ( index )
-        console.log (position)
+        let newPosition = ( position === maxPosition ? 0 : position + 1)
+        setPosition ( newPosition )
     }
 
     const LeftClick = () => {
-        let index = (position === 0 ? 4 : position - 1)
-        setPosition ( index )
-        console.log (position)
+        let newPosition = (position === 0 ? maxPosition : position - 1)
+        setPosition ( newPosition )
     }
+
 
 
     return (
