@@ -20,7 +20,7 @@ This is a redesign of the Games Workshop Landing Page. It has been designed in F
 ## Autor ✒️
 **Laura Reyes**
 
-- 🖥 I am a Product Designer UI/UX with Frontend skills
+- 🖥 I am a UX Engineer
 
 - 👨‍💻 Visit my live porfolio [https://www.lauritisreyes.com](https://www.lauritisreyes.com)
 
